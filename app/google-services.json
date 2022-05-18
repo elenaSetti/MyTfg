@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "542211609976",
+    "firebase_url": "https://ethiwo-tfg-app-default-rtdb.firebaseio.com",
+    "project_id": "ethiwo-tfg-app",
+    "storage_bucket": "ethiwo-tfg-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:542211609976:android:46b837736fc640d030648d",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "542211609976-nmvip4aks70neoffb7mu5jbj1nqto82o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSq36m5gASCP6tP6NAYTPWD_H7taZW63w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "542211609976-nmvip4aks70neoffb7mu5jbj1nqto82o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

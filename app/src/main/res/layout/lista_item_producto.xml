@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    app:cardCornerRadius="6dp"
+    app:cardBackgroundColor="@color/naranja"
+    android:elevation="6dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/imgProducto"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:id="@+id/txtViewProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/imgProducto"
+            android:text="TextView"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/txtViewDescripcion"
+            android:layout_width="203dp"
+            android:layout_height="42dp"
+            android:layout_below="@id/txtViewProducto"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/imgProducto"
+            android:text="TextView"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/imgCesta"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="-40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/txtViewDescripcion"
+            app:srcCompat="@drawable/cesta" />
+
+        <TextView
+            android:id="@+id/txtViewPrecio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtViewDescripcion"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/imgProducto"
+            android:text="TextView"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
