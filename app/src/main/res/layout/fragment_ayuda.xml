@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E4D1B4">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="210dp"
+        android:text="Categorias de ayuda"
+        android:textColor="@color/black"
+        android:textSize="30dp">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/imageCamion"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginLeft="30dp"
+        app:srcCompat="@drawable/camion1" />
+
+    <TextView
+        android:id="@+id/textEnvios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="280dp"
+        android:layout_toRightOf="@id/imageCamion"
+        android:text="Envios"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:id="@+id/imageDev"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="340dp"
+        app:srcCompat="@drawable/ic_baseline_keyboard_return_24" />
+
+    <TextView
+        android:id="@+id/textDev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="340dp"
+        android:layout_toRightOf="@id/imageDev"
+        android:text="Devoluciones y Rembolsos"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:id="@+id/imageProblem"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="400dp"
+        app:srcCompat="@drawable/problem" />
+
+    <TextView
+        android:id="@+id/textProblem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="400dp"
+        android:layout_toRightOf="@+id/imageProblem"
+        android:text="Problemas con el pedido"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:id="@+id/imageStock"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="460dp"
+        app:srcCompat="@drawable/stock" />
+
+    <TextView
+        android:id="@+id/textStock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="460dp"
+        android:layout_toRightOf="@+id/imageStock"
+        android:text="Producto y Stock"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:id="@+id/imageCard"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="530dp"
+        app:srcCompat="@drawable/card" />
+
+    <TextView
+        android:id="@+id/textCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="530dp"
+        android:layout_toRightOf="@+id/imageCard"
+        android:text="Pago,Promociones y Descuentos"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:id="@+id/imageSoporte"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="600dp"
+        app:srcCompat="@drawable/settings" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="600dp"
+        android:layout_toRightOf="@+id/imageSoporte"
+        android:text="Soporte Tecnico "
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_marginLeft="100dp"
+        app:srcCompat="@drawable/ethi" />
+
+
+</RelativeLayout>

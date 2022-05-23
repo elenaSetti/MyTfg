@@ -20,6 +20,8 @@
         </activity>
         <activity android:name=".Home" />
         <activity android:name=".Registrarse" />
+        <activity android:name=".RegistroProducto" />
+        <activity android:name=".Tama" />
     </application>
 
 </manifest>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/fondo2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="150dp"
+        app:srcCompat="@drawable/logi" />
+    <EditText
+        android:id="@+id/idproducto"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/logo"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="@color/black"
+        android:ems="12"
+        android:hint="Identificador Producto"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="20dp" />
+    <EditText
+        android:id="@+id/txtProducto"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/idproducto"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="@color/black"
+        android:ems="12"
+        android:hint="Nombre Producto"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/txtDescripcion"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/txtProducto"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="@color/black"
+        android:ems="12"
+        android:hint="Descripción"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/txtPrecio"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/txtDescripcion"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/black"
+        android:ems="12"
+        android:hint="Precio"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="20dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+    <EditText
+        android:id="@+id/txtFoto"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/txtPrecio"
+        android:backgroundTint="@color/black"
+        android:ems="12"
+        android:hint="Inserta URL imagen"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="20dp"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/btnregistroProducto"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/txtFoto"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/botonregistrar"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:text="Sign up" />
+</RelativeLayout>

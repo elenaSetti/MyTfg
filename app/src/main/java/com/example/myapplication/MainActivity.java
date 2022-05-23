@@ -11,6 +11,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -22,7 +25,7 @@ public class MainActivity extends AppCompatActivity  {
     private Intent intent;
     private EditText telefono;
     private EditText password;
-    private String contenidoTele;
+    static String contenidoCorreo;
     private String contenidoPass;
     private Button btnLogin;
     private Button btnRegistro;
@@ -48,48 +51,17 @@ public class MainActivity extends AppCompatActivity  {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                try {
-                    contenidoTele = telefono.getText().toString();
-                    contenidoPass = password.getText().toString();
-                    //Controlamos que no haya campos vacíos
-                    if (contenidoTele.isEmpty() || contenidoPass.isEmpty()) {
-                        Toast.makeText(MainActivity.this, "Por favor introduce tu telefono y contraseña", Toast.LENGTH_SHORT).show();
-                    } else {
-                  databaseReference.child("Usuario").addListenerForSingleValueEvent(new ValueEventListener() {
-                      @Override
-                      public void onDataChange(@NonNull DataSnapshot snapshot) {
-                          //Comprueba si el correo existe en firebase
-                          //Si existe se coge la contraseña para ver si es la misma
-                            System.out.println(snapshot.hasChild(contenidoTele));
-                          if(snapshot.hasChild(contenidoTele)){
-                              getPassword= snapshot.child(contenidoTele).child("password").getValue(String.class);
-                              if(getPassword.equals(contenidoPass)){
-                                  Toast.makeText(MainActivity.this, "Has iniciado sesión", Toast.LENGTH_SHORT).show();
-                              //LLevamos al usuario a la página principa
-                                startActivity(new Intent(MainActivity.this,Home.class));
 
-                                finish();
-                              }else{
-                                  Toast.makeText(MainActivity.this, "Contraseña incorrecta", Toast.LENGTH_SHORT).show();
-
-                              }
-                          }else{
-                              Toast.makeText(MainActivity.this, "No existe el usuario", Toast.LENGTH_SHORT).show();
-
-                          }
-                      }
-
-                      @Override
-                      public void onCancelled(@NonNull DatabaseError error) {
-
-                      }
-                  });
-                    }
-
-                } catch (Exception e) {
-                    e.printStackTrace();
+                contenidoCorreo = telefono.getText().toString();
+                contenidoPass = password.getText().toString();
+                //Controlamos que no haya campos vacíos
+                if (contenidoCorreo.isEmpty() || contenidoPass.isEmpty()) {
+                    Toast.makeText(MainActivity.this, "Por favor introduce tu telefono y contraseña", Toast.LENGTH_SHORT).show();
+                } else {
+                    loginUser();
                 }
-            }
+              }
+
         });
 
         btnRegistro.setOnClickListener(new View.OnClickListener() {
@@ -99,5 +71,31 @@ public class MainActivity extends AppCompatActivity  {
             }
         });
 
+    }
+    private void loginUser(){
+        firebaseAuth.signInWithEmailAndPassword(contenidoCorreo,contenidoPass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+
+                if(task.isSuccessful()){
+                    startActivity(new Intent(MainActivity.this, Home.class));
+                    finish();
+                }else{
+                    Toast.makeText(MainActivity.this, "No se puede iniciar sesión, comprueba que sea correcto", Toast.LENGTH_SHORT).show();
+
+                }
+            }
+        });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        if(firebaseAuth.getCurrentUser()!=null){
+
+            startActivity(new Intent(MainActivity.this, Home.class));
+            finish();
+        }
     }
 }

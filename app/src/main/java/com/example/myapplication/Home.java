@@ -1,7 +1,14 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.SearchView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.Adapter.MyAdapter;
 import com.example.myapplication.entities.Producto;
+import com.example.myapplication.entities.Usuario;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -26,7 +34,9 @@ public class Home  extends AppCompatActivity {
     DatabaseReference databaseReference;
     FirebaseAuth firebaseAuth;
     TextView textViewNombre;
+    Button btnSubir;
     String nombre;
+    String id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,8 +46,23 @@ public class Home  extends AppCompatActivity {
 
         firebaseAuth= FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference();
-        System.out.println(" user.getDisplayName()");
         textViewNombre =(TextView) findViewById(R.id.editTextNombre) ;
+        btnSubir=(Button)findViewById(R.id.btnSubir);
+
+        String contenidoEmail= MainActivity.contenidoCorreo;
+
+        if(MainActivity.contenidoCorreo.equals("tamara@gmail.com")|| MainActivity.contenidoCorreo.equals("elena@gmail.com")) {
+            btnSubir.setVisibility(View.VISIBLE);
+        }else{
+            System.out.println("Error");
+        }
+        btnSubir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Home.this,RegistroProducto.class));
+            }
+        });
+
 
         //GESTIÓN DEL RECYCLER VIEW
     recyclerView= (RecyclerView) findViewById(R.id.listaProductos);
@@ -48,6 +73,8 @@ public class Home  extends AppCompatActivity {
 
     myAdapter = new MyAdapter(options);
     recyclerView.setAdapter(myAdapter);
+
+    getUserInfo();
     }
 
     @Override
@@ -62,16 +89,15 @@ public class Home  extends AppCompatActivity {
         myAdapter.stopListening();
     }
 
-    //MÉTODO PARA MOSTRAR SESION DEL USUARIO
-
-    /*private void getUserInfo(){
-
-        databaseReference.child("Usuario").child().addValueEventListener(new ValueEventListener() {
+    private void getUserInfo(){
+        id=firebaseAuth.getCurrentUser().getUid();
+        databaseReference.child("Usuario").child(id).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
+                    nombre=snapshot.child("nombre").getValue().toString();
 
-
+                    textViewNombre.setText(nombre);
                 }
             }
 
@@ -80,5 +106,5 @@ public class Home  extends AppCompatActivity {
 
             }
         });
-    }*/
+    }
 }

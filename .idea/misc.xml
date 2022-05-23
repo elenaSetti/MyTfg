@@ -3,13 +3,36 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/esett/AndroidStudioProjects/MyApplication3/app/src/main/res/drawable/about_us.xml" value="0.11041666666666666" />
         <entry key="..\:/Users/esett/AndroidStudioProjects/MyApplication3/app/src/main/res/drawable/botonentrar.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/esett/AndroidStudioProjects/MyApplication3/app/src/main/res/drawable/botonregistrar.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/esett/AndroidStudioProjects/MyApplication3/app/src/main/res/drawable/camion.xml" value="0.11041666666666666" />
+        <entry key="..\:/Users/esett/AndroidStudioProjects/MyApplication3/app/src/main/res/drawable/camion1.xml" value="0.11041666666666666" />
+        <entry key="..\:/Users/esett/AndroidStudioProjects/MyApplication3/app/src/main/res/drawable/card.xml" value="0.11041666666666666" />
+        <entry key="..\:/Users/esett/AndroidStudioProjects/MyApplication3/app/src/main/res/drawable/devolucion.xml" value="0.11041666666666666" />
+        <entry key="..\:/Users/esett/AndroidStudioProjects/MyApplication3/app/src/main/res/drawable/help.xml" value="0.11041666666666666" />
+        <entry key="..\:/Users/esett/AndroidStudioProjects/MyApplication3/app/src/main/res/drawable/ic_baseline_fire_truck_24.xml" value="0.11041666666666666" />
+        <entry key="..\:/Users/esett/AndroidStudioProjects/MyApplication3/app/src/main/res/drawable/ic_baseline_keyboard_return_24.xml" value="0.11041666666666666" />
+        <entry key="..\:/Users/esett/AndroidStudioProjects/MyApplication3/app/src/main/res/drawable/inicio.xml" value="0.11041666666666666" />
+        <entry key="..\:/Users/esett/AndroidStudioProjects/MyApplication3/app/src/main/res/drawable/logout.xml" value="0.11041666666666666" />
+        <entry key="..\:/Users/esett/AndroidStudioProjects/MyApplication3/app/src/main/res/drawable/problem.xml" value="0.11041666666666666" />
+        <entry key="..\:/Users/esett/AndroidStudioProjects/MyApplication3/app/src/main/res/drawable/profile.xml" value="0.11041666666666666" />
+        <entry key="..\:/Users/esett/AndroidStudioProjects/MyApplication3/app/src/main/res/drawable/search_icon.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/esett/AndroidStudioProjects/MyApplication3/app/src/main/res/drawable/settings.xml" value="0.11041666666666666" />
+        <entry key="..\:/Users/esett/AndroidStudioProjects/MyApplication3/app/src/main/res/drawable/stock.xml" value="0.11041666666666666" />
         <entry key="..\:/Users/esett/AndroidStudioProjects/MyApplication3/app/src/main/res/layout/Home.xml" value="0.184375" />
-        <entry key="..\:/Users/esett/AndroidStudioProjects/MyApplication3/app/src/main/res/layout/home.xml" value="0.11851851851851852" />
-        <entry key="..\:/Users/esett/AndroidStudioProjects/MyApplication3/app/src/main/res/layout/lista_item_producto.xml" value="0.2" />
+        <entry key="..\:/Users/esett/AndroidStudioProjects/MyApplication3/app/src/main/res/layout/fragment_ayuda.xml" value="0.1" />
+        <entry key="..\:/Users/esett/AndroidStudioProjects/MyApplication3/app/src/main/res/layout/fragment_inicio.xml" value="0.1" />
+        <entry key="..\:/Users/esett/AndroidStudioProjects/MyApplication3/app/src/main/res/layout/fragment_nosotros.xml" value="0.1" />
+        <entry key="..\:/Users/esett/AndroidStudioProjects/MyApplication3/app/src/main/res/layout/fragment_perfil.xml" value="0.1" />
+        <entry key="..\:/Users/esett/AndroidStudioProjects/MyApplication3/app/src/main/res/layout/home.xml" value="0.25" />
+        <entry key="..\:/Users/esett/AndroidStudioProjects/MyApplication3/app/src/main/res/layout/lista_item_producto.xml" value="0.33" />
         <entry key="..\:/Users/esett/AndroidStudioProjects/MyApplication3/app/src/main/res/layout/login.xml" value="0.22" />
+        <entry key="..\:/Users/esett/AndroidStudioProjects/MyApplication3/app/src/main/res/layout/nav_header.xml" value="0.1" />
         <entry key="..\:/Users/esett/AndroidStudioProjects/MyApplication3/app/src/main/res/layout/registro.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/esett/AndroidStudioProjects/MyApplication3/app/src/main/res/layout/tam.xml" value="0.1265625" />
+        <entry key="..\:/Users/esett/AndroidStudioProjects/MyApplication3/app/src/main/res/menu/darwer_menu.xml" value="0.1" />
+        <entry key="..\:/Users/esett/AndroidStudioProjects/MyApplication3/app/src/main/res/menu/search.xml" value="0.2" />
         <entry key="..\:/Users/esett/AndroidStudioProjects/MyApplication3/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.19479166666666667" />
       </map>
     </option>

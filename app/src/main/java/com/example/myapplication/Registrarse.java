@@ -39,7 +39,7 @@ public class Registrarse extends AppCompatActivity {
     private String contenidoPasworConf;
     private String contenidoUser;
     private String contenidoPhone;
-    private String id;
+    private String uid;
     private Intent intent;
     Map<String,Object> map= new HashMap<>();
 
@@ -117,8 +117,8 @@ public class Registrarse extends AppCompatActivity {
                 map.put("nombre",contenidoUser);
                 map.put("email",contenidoEmail);
                 map.put("password",contenidoPaswor);
-                id=firebaseAuth.getCurrentUser().getUid();
-                databaseReference.child("Usuario").child(contenidoPhone).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+                uid=firebaseAuth.getCurrentUser().getUid();
+                databaseReference.child("Usuario").child(uid).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task2) {
                         if(task2.isSuccessful()){
